@@ -1,2 +1,8 @@
 # MESOM
-Trajectory analysis and optimisation for a Moon-Enabled Sun Occultation Mission
+MESOM: Moon Enabled Sun Occultation Mission (https://www.ras.ac.uk/news-and-press/research-highlights/artificial-solar-eclipses-space-could-shed-light-sun) is a UK-led mission that aims to recreate solar eclipses in space in order to obtain high-quality observations of the solar corona by leveraging the Moon as a natural occulting body. It is a collaboration between leading space agencies and space engineering universities in the UK.
+In the context of my Master's thesis at the University of Surrey, I am working on designing and optimising candidate trajectories for this mission in the Sun Earth CR3BP system. Key objectives include:
+- Developing an accurate model of the Sun-Earth dynamical system, by implementing the governing CR3BP equations in MATLAB. The model was validated by consulting JPL's Periodic Orbit database.
+- Modelling the evolution of the occultation zone caused by the Moon, by deriving the key geomtrical constraints and propagating the orbit of the Moon around the Earth. For simplicity, the model has been initially based on the assumption of circular planar orbits, nevertheless a higher fidelity full-ephemeris model will later be implemented to obtain accurate results.
+- Since for the purpose of this mission it is required for the candidate trajectories to be resonant with the Moon, numerical continuation techniques were employed to compute the initial conditions of moon-resonant periodic orbits.
+- An event function was then written to detect which of the moon-resonant periodic orbits experienced passages in the occultation zone, for a range of initial Moon's positions which were iterated every 0.05° to find the most favourable orbits.
+
